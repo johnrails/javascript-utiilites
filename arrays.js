@@ -15,3 +15,14 @@ Array.prototype.find = function(){
 	};
 	return returnArray;
 }
+
+// object or array
+
+function isArray(testObject){
+	return testObject && !(testObject.propertyIsEnumerable('length')) && typeof testObject === 'object' && typeof testObject.lenght === 'number';
+}
+
+//shorter
+Object.prototype.isArray = function(){
+	return this.contructor == Array;
+}
